@@ -25,7 +25,7 @@ function App() {
   
   useEffect(() => {
       const fetchPis = async () => {
-        const result = await axios(`https://api.open-notify.org/astros.json`)
+        const result = await axios(`http://api.open-notify.org/astros.json`)
         
         console.log(result.data)
         setPis(result.data)
@@ -38,7 +38,7 @@ fetchPis()
 
   useEffect(() => {
       const fetchLocation = async () => {
-        const result = await axios('https://api.open-notify.org/iss-now.json')
+        const result = await axios('http://api.open-notify.org/iss-now.json')
 
         console.log(result.data)
         setLocation(result.data)
